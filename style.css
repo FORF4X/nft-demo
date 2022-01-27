@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding:0px;
+    margin:0px;
+    max-width:100vw;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgb(253, 187, 44);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#spinner {
+    animation: rotate 0.56s infinite linear;
+    width:50px;
+    height:50px;
+    border:12px solid rgb(15, 15, 32);
+    border-bottom:12px solid rgb(253, 187, 44);
+    border-radius:50%;
+    margin:0;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+header {
+    width:92vw;
+    padding:6vh 4vw;
+    position:fixed;
+    font-weight:bold;
+    background:transparent;
+    color:#fff;
+    transition:0.4s ease-in-out;
+    z-index:2;
+}
+header table {
+    width:100%;
+}
+#logo {
+    width:20%;
+}
+#navigation {
+    width:80%;
+}
+
+#logo {
+    font-size:24px;
+    color:rgb(253, 187, 44);
+}
+#navigation {
+    text-align:right;
+}
+#navigation a:not(:last-child) {
+    color:rgb(15, 15, 32);
+    text-decoration:none;
+    padding:5px 10px;
+    border-bottom:2px solid transparent;
+    margin-left:4vw;
+    transition:0.3s ease-in-out;
+}
+#navigation a:hover:not(:last-child){
+    border-bottom:2px solid rgb(15, 15, 32);
+}
+
+.btn_connect-wallet {
+    color: rgb(15, 15, 32);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid rgb(15, 15, 32);
+    border-radius: 15px;
+    margin-left: 4vw;
+    transition:0.3s ease-in-out;
+}
+
+.btn_connect-wallet:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+#top_part {
+    width:100%;
+}
+#top_part tr td{
+    width:50%;
+}
+#about {
+    width:84% !important;
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:left;
+    padding:0px 8%;
+}
+#about h1 {
+    font-size:76px;
+    word-wrap:break-word;
+}
+#about table {
+    width:70%;
+    margin-top:4vh;
+}
+#about table tr td {
+    width:20% !important;
+    text-align:left;
+}
+.social {
+    color:rgb(253, 187, 44);
+    font-size:23px;
+    padding:12px 17px;
+    border-radius:50%;
+    background:transparent;
+    transition:0.3s ease-in-out;
+    font-weight:bold;
+    margin:0px 8px;
+}
+.social:hover { 
+    cursor: pointer;
+    color:#fff;
+    background:rgb(253, 187, 44);
+    box-shadow:0px 10px 30px rgb(253, 187, 44, 0.8);
+}
+.btn_one {
+    font-size:18px;
+    font-family: 'Poppins', sans-serif;
+    color:rgb(15, 15, 32);
+    background:#fff;
+    border:3px solid rgb(15, 15, 32);
+    padding:8px 40px;
+    width:35%;
+    border-radius:80px;
+    font-weight:bold;
+    margin:2vh 0px;
+    transition:0.3s ease-in-out;
+}
+.btn_one:hover {
+    box-shadow:0px 10px 30px rgb(253, 187, 44, 0.75);
+    cursor:pointer;
+    color: #fff;;
+    background:rgb(253, 187, 44);
+    border-color: rgb(253, 187, 44);
+}
+#rightImage {
+    width:100%;
+    height:95vh;
+    background:linear-gradient(0deg,rgb(253, 187, 44, 0.75),rgb(253, 187, 44, 0.75)),url(assets/hero-image.png) center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+/***********
+ROADMAP
+***********/
+#roadmap {
+    width:92vw;
+    padding:6vh 4vw;
+}
+#roadmap h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(253, 187, 44);
+    width:10%;
+}
+
+.roadmap {
+    padding: 1rem 1.5rem;
+  }
+  .roadmap .point {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    position: relative;
+  }
+  .roadmap .point:first-child .point-index {
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, 2px) !important;
+  }
+  .roadmap .point:last-child .point-index {
+    top: 0;
+    transform: translate(50%, -2px) !important;
+  }
+  .roadmap .point:not(:last-child) {
+    border-bottom: 2px solid rgb(253, 187, 44);
+  }
+  .roadmap .point:nth-child(odd) {
+    align-items: flex-start;
+  }
+  .roadmap .point:nth-child(odd):not(:first-child) {
+    border-left: 2px solid rgb(253, 187, 44);
+  }
+  .roadmap .point:nth-child(odd) .point-index {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .roadmap .point:nth-child(even) {
+    align-items: flex-end;
+  }
+  .roadmap .point:nth-child(even):not(:last-child) {
+    border-right: 2px solid rgb(253, 187, 44);
+  }
+  .roadmap .point:nth-child(even) .point-index {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+  .roadmap .point .point-index {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: rgb(15, 15, 32);
+    border: 2px solid rgb(253, 187, 44);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .roadmap .point .point-label {
+    flex: 1 0 100%;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgb(15, 15, 32);
+  }
+  @media (min-width: 641px) {
+    .roadmap .point .point-label {
+      flex: 1 0 50%;
+      width: 50%;
+    }
+  }
+  .roadmap .point .point-text {
+    flex: 1 0 100%;
+    width: 100%;
+    font-size: 12px;
+    color: #969696;
+  }
+  @media (min-width: 641px) {
+    .roadmap .point .point-text {
+      flex: 1 0 50%;
+      width: 50%;
+    }
+  }
+
+/***********
+TEAM
+***********/
+#team h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(253, 187, 44);
+    width:10%;
+}
+
+.row {
+    width: 92vw;
+    padding: 6vh 4vw;
+}
+
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgb(15, 15, 32, 02);
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color:rgb(15, 15, 32);
+    background:#fff;
+    border:3px solid rgb(15, 15, 32);
+    padding:8px 40px;
+    width:35%;
+    border-radius:80px;
+    font-weight:bold;
+    margin:2vh 0px;
+    transition:0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    box-shadow:0px 10px 30px rgb(253, 187, 44, 0.75);
+    cursor:pointer;
+    color: #fff;;
+    background:rgb(253, 187, 44);
+    border-color: rgb(253, 187, 44);
+  }
+/***********
+CONTACT FORM
+***********/
+#contact {
+    width:92vw;
+    padding:6vh 4vw;
+}
+#contact h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(253, 187, 44);
+    width:10%;
+}
+#contact table {
+    width:100%;
+}
+#contact table tr td {
+    width:50%;
+}
+#inner_div table{
+    width:100%;
+}
+#inner_div table tr td{
+    font-weight:bold;
+}
+#inner_table tr td{
+    padding:10px 20px !important;
+}
+#contact form {
+    width:100%;
+}
+#contact form input {
+    width:96%;
+    margin:20px 1%;
+    background:transparent;
+    border:0px;
+    border-bottom:3px solid rgb(253, 187, 44);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    transition:0.3s ease-in-out;
+    color:rgb(15, 15, 32);
+    font-weight:bold;
+}
+#contact form textarea {
+    width:96%;
+    margin:20px 1%;
+    padding:8px 10px;
+    border:0px;
+    border-bottom:3px solid rgb(253, 187, 44);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    background:transparent;
+    resize:none;
+    transition:0.43 ease-in-out;
+    color:#000;
+    font-weight:bold;
+}
+#contact form input:focus {
+    outline:none;
+    border-bottom:3px solid rgb(253, 187, 44);
+}
+#contact form textarea:focus {
+    outline:none;
+    border-bottom:3px solid rgb(253, 187, 44);
+}
+#address {
+    position:relative;
+    top:-25px;
+    left:30px;
+}
+#footer {
+    width:100%;
+    padding:10vh 0px;
+    text-align:center;
+    font-weight:bold;
+}
+#footer a {
+    color:rgb(253, 187, 44);
+    text-decoration:none;
+}
+::placeholder {
+    color:rgb(15, 15, 32);
+}
+button:focus {
+    outline:none;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0,0.8); 
+}
+
+/*************
+RESPONSIVENESS
+*************/
+@media (max-width: 1000px){
+    #photos {
+    columns:1;
+    column-gap:0%;
+    }
+    #photos img {
+        margin:2% 0px;
+    }
+    #photos img:hover {
+        transform: scale(1);
+        cursor: pointer;
+    }
+    #rightImage {
+        display:none;
+    }
+    #top_part {
+        border:0px;
+    }
+    #top_part tr td{
+        width:100%;
+        text-align:center;
+    }
+    #about {
+        width:92% !important;
+        height:75vh;
+        padding-top:20vh !important;
+        text-align:center;
+        padding:0px 4%;
+    }
+    #about table {
+        width:100%;
+        margin-top:6vh;
+    }
+    #about table tr td {
+        text-align:center;
+    }
+    .btn_one {
+    padding:6px 30px;
+    width:60%;
+    margin:4vh auto;
+    box-shadow:0px 10px 20px rgba(255, 44, 90, 0.8);
+    background:rgb(255, 44, 90);
+    color:#fff;
+    }
+    .btn_one:hover {
+        box-shadow:0px 10px 40px rgba(255, 44, 90, 0.8);
+        cursor:pointer;
+    }
+    #contact table tr td {
+        width:100%;
+        display:block;
+    }
+    #inner_table tr td{
+        padding:10px 0px !important;
+    }
+    #contact form input {
+        width:90%;
+    }
+    #contact form textarea {
+        width:90%;
+    }
+    #roadmap h1 {
+        width:19%;
+    }
+    #team h1 {
+        width:25%;
+    }
+    #contact h1 {
+        width:33%;
+    }
+    header {
+        width:96vw;
+        background:#fff;
+        padding:4vh 2vw;
+        position:absolute;
+    }
+    #header table tr td {
+        width:100%;
+        display:block;
+        text-align:center;
+        padding:15px 0px;
+    }
+    #navigation a {
+        color:#000;
+    }
+}
